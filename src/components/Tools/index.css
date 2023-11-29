@@ -1,0 +1,71 @@
+.tools-container {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.title {
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    font-size: 2rem;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: 260vh;
+}
+
+.tool-card {
+    border-radius: 10px;
+    padding: 20px;
+    width: 80vw;
+    height: 40vh;
+    background-color: #323232;
+    position: sticky;
+    top: 40%;
+    opacity: 0;
+    transform: translateY(250px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.tool-icon {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.tool-name {
+    font-size: 5rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .tool-card {
+        width: 90vw; /* Ajustement de la largeur pour les mobiles */
+        height: auto; /* Hauteur auto pour s'adapter au contenu */
+        flex-direction: column; /* Empilement vertical des éléments */
+        padding: 10px;
+        top: 30%; /* Ajustement de la position sticky */
+    }
+
+    .tool-icon {
+        width: 200px; /* Réduction de la taille de l'icône */
+        height: 200px;
+    }
+
+    .tool-name {
+        font-size: 2rem; /* Réduction de la taille de la police */
+    }
+
+    .cards-container {
+        height: 200vh; /* Augmentation de la hauteur pour un meilleur défilement */
+    }
+}

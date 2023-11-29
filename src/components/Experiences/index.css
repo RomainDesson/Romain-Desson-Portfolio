@@ -1,0 +1,32 @@
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.experience-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+}
+
+.experience-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.slogan {
+    font-style: italic;
+}
+
+.role {
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .experience-grid {
+        grid-template-columns: 1fr; /* Affichez une seule colonne sur les petits écrans */
+    }
+}

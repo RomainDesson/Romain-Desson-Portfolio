@@ -1,0 +1,23 @@
+.outline-text {
+    color: transparent;
+    text-shadow:
+            -2px -2px 0 #FFF,
+            2px -2px 0 #FFF,
+            -2px  2px 0 #FFF,
+            2px  2px 0 #FFF;
+}
+
+.name-text {
+    color: #323232
+}
+
+.img-animation {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+

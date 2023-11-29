@@ -1,0 +1,18 @@
+.outline-text {
+    color: transparent;
+    text-shadow:
+            -2px -2px 0 #FFF,
+            2px -2px 0 #FFF,
+            -2px  2px 0 #FFF,
+            2px  2px 0 #FFF;
+}
+
+.h-20vh {
+    height: 20vh;
+}
+
+@media (max-width: 768px) {
+    .h-20vh {
+        height: 40vh; /* Augmenter la hauteur sur mobile pour l'affichage vertical */
+    }
+}
