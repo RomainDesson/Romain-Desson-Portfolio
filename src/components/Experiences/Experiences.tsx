@@ -43,7 +43,7 @@ export const Experiences = () => {
     return (
         <>
             <h1 className="name-text text-6xl md:text-8xl lg:text-9xl xl:text-10xl font-bold outline-text mb-6 mt-20">
-                Teams I<br/>Worked With
+                Teams I Worked With
             </h1>
             <div className="experience-grid">
                 {experiences.map(exp => (

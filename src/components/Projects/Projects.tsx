@@ -4,8 +4,7 @@ export const Projects = () => {
     return (
         <>
             <h1 className="name-text text-6xl md:text-8xl lg:text-9xl xl:text-10xl font-bold outline-text mb-6 mt-20">
-                My<br/>
-                Projects
+                My Projects
             </h1>
             <div className="flex flex-col justify-center items-center space-y-8 max-w-7xl mx-auto">
                 <ProjectItem
