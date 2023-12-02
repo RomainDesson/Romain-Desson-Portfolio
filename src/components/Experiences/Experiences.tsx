@@ -1,19 +1,44 @@
 import React, { useRef, useEffect } from "react";
-import gsap from "gsap";
-import ScrollTrigger from 'gsap/ScrollTrigger';
 import "./index.css"; // Assurez-vous de créer ce fichier CSS
 
 export const Experiences = () => {
     const experiences = [
         {
             id: 1,
-            name: "Entreprise A",
-            slogan: "Slogan de l'Entreprise A",
-            description: "Courte description de mon rôle et de l'entreprise.",
-            role: "Mon rôle",
-            image: "/chemin/vers/image-entreprise-a.png" // Chemin vers l'illustration de l'entreprise
+            name: "Astran",
+            slogan: "The secure cloud storage made simple.",
+            description: "Startup",
+            role: "Front-end engineer",
+            image: "/chemin/vers/image-entreprise-a.png",
+            links: [
+                'https://www.linkedin.com/company/astran-io/',
+                'https://astran.io/'
+            ]
         },
-        // Ajoutez d'autres expériences ici
+        {
+            id: 1,
+            name: "Obat",
+            slogan: "Construct Success: Simplifying Invoices & Client Management.",
+            description: "Scale-up",
+            role: "Front-end engineer",
+            image: "/chemin/vers/image-entreprise-a.png",
+            links: [
+                'https://www.linkedin.com/company/obat/',
+                'https://www.obat.fr/'
+            ]
+        },
+        {
+            id: 1,
+            name: "Soundcast",
+            slogan: "Your audio business partner.",
+            description: "Scale-up",
+            role: "Full-stack engineer",
+            image: "/chemin/vers/image-entreprise-a.png",
+            links: [
+                'https://www.linkedin.com/company/soundcast-io/mycompany/',
+                'https://soundcast.io/en/'
+            ]
+        },
     ];
 
     return (
