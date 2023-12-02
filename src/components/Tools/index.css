@@ -36,27 +36,33 @@
 .tool-name {
     font-size: 2.5rem;
     text-align: center;
+    display: none;
 }
 
 @media (max-width: 768px) {
     .tool-card {
-        width: 90vw; /* Ajustement de la largeur pour les mobiles */
-        height: auto; /* Hauteur auto pour s'adapter au contenu */
-        flex-direction: column; /* Empilement vertical des éléments */
+        width: auto;
+        height: auto;
+        flex-direction: column;
         padding: 10px;
-        top: 30%; /* Ajustement de la position sticky */
-    }
-
-    .tool-icon {
-        width: 200px; /* Réduction de la taille de l'icône */
-        height: 200px;
-    }
-
-    .tool-name {
-        font-size: 2rem; /* Réduction de la taille de la police */
+        gap: 10px;
     }
 
     .cards-container {
-        height: 200vh; /* Augmentation de la hauteur pour un meilleur défilement */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .tool-icon {
+        width: 80px; /* Réduction de la taille de l'icône */
+        height: 80px;
+    }
+
+    .tool-name {
+        display: none;
+    }
+
+    .cards-container {
+        height: 50vh; /* Augmentation de la hauteur pour un meilleur défilement */
     }
 }

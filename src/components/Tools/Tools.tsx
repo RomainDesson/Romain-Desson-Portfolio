@@ -20,8 +20,8 @@ export const Tools = () => {
     ]
 
     return (
-        <div className="tools-container">
-            <h2 ref={titleRef} className="name-text text-6xl md:text-8xl lg:text-9xl xl:text-10xl font-bold outline-text mb-6 mt-20">
+        <div className="tools-container" id={'tools'}>
+            <h2 ref={titleRef} className="name-text text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold outline-text mb-6 mt-20">
                 My Tools
             </h2>
             <div ref={cardsContainerRef} className="cards-container pt-20">

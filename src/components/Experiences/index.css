@@ -6,8 +6,74 @@
 }
 
 .experience-card {
-    padding: 15px;
+    position: relative;
     text-align: center;
+    padding: 15px;
+    color: white; /* Pour assurer la lisibilité du texte */
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.experience-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 1;
+}
+
+.experience-content {
+    position: relative;
+    z-index: 2;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.experience-content > .slogan {
+    font-size: 1rem;
+}
+
+.card-footer {
+    align-self: flex-end;
+}
+
+.links {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.links a {
+    display: flex;
+    align-items: center;
+}
+
+.links img {
+    width: 24px;
+    height: auto;
+}
+
+.astran-bg {
+    background-image: url('../../../public/astran.png');
+}
+
+.obat-bg {
+    background-image: url('../../../public/obat.png');
+}
+
+.soundcast-bg {
+    background-image: url('../../../public/soundcast.png');
 }
 
 .experience-image {
@@ -26,6 +92,6 @@
 
 @media (max-width: 768px) {
     .experience-grid {
-        grid-template-columns: 1fr; /* Affichez une seule colonne sur les petits écrans */
+        grid-template-columns: 1fr;
     }
 }
