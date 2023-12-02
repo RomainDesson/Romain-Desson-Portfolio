@@ -1,10 +1,12 @@
 import { ProjectItem } from '../ProjectItem/ProjectItem.tsx'
+import {useTranslation} from "react-i18next";
 
 export const Projects = () => {
+    const { t } = useTranslation();
     return (
         <div id={'projects'}>
-            <h1 className="name-text text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold outline-text mb-6 mt-20">
-                My Projects
+            <h1 className="name-text text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold outline-text mb-6 pt-28">
+                {t('myProjects')}
             </h1>
             <div className="flex flex-col justify-center items-center space-y-32 max-w-7xl mx-auto">
                 <ProjectItem

@@ -1,11 +1,24 @@
 .topbar-container {
-    height: 100px;
+    height: 80px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     z-index: 1000;
+    background-color: #323232;
+    border-bottom: 2px solid white;
 }
 
 .topbar-button {
     color: white !important;
+}
+
+.logo {
+    height: 80px;
+    width: 80px;
+}
+
+@media (max-width: 768px) {
+    .topbar-container {
+        display: none;
+    }
 }

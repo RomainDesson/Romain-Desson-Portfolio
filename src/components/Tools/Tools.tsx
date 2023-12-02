@@ -6,8 +6,10 @@ import NodeIcon from '../../../public/nodejs.svg';
 import SolidityIcon from '../../../public/solidity.svg';
 import DockerIcon from '../../../public/docker.svg';
 import GCPIcon from '../../../public/gcp.svg';
+import {useTranslation} from "react-i18next";
 
 export const Tools = () => {
+    const { t } = useTranslation();
     const cardsContainerRef = useRef(null);
     const titleRef = useRef(null);
     const toolsArray = [
@@ -21,8 +23,8 @@ export const Tools = () => {
 
     return (
         <div className="tools-container" id={'tools'}>
-            <h2 ref={titleRef} className="name-text text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold outline-text mb-6 mt-20">
-                My Tools
+            <h2 ref={titleRef} className="name-text text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold outline-text mb-6 mt-28">
+                {t('myTools')}
             </h2>
             <div ref={cardsContainerRef} className="cards-container pt-20">
                 {toolsArray.map((tool, index) => (

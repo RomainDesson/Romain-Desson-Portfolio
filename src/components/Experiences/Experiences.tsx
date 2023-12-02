@@ -1,16 +1,17 @@
 import "./index.css";
 import LinkedinIcon from '../../../public/linkedin.svg'
+import {useTranslation} from "react-i18next";
 
 export const Experiences = () => {
+    const { t } = useTranslation();
     const experiences = [
         {
             id: 1,
             name: "Astran",
             slogan: "The secure cloud storage made simple.",
             size: "Startup",
-            description: "I participated in early stage of Astran, implementing strong basics and good code practice for the users interface.",
+            description: t('astranWork'),
             role: "Front-end engineer",
-            image: "/chemin/vers/image-entreprise-a.png",
             links: [
                 'https://www.linkedin.com/company/astran-io/',
                 'https://astran.io/'
@@ -20,10 +21,9 @@ export const Experiences = () => {
             id: 1,
             name: "Obat",
             slogan: "Simplifying Invoices & Client Management.",
-            size: "Scale-up",
-            description: "I joined Obat to refact the legacy applications in react. I learnt a lot about refactoring and good pratices",
+            size: 'Scale up',
+            description: t('obatWork'),
             role: "Front-end engineer",
-            image: "/chemin/vers/image-entreprise-a.png",
             links: [
                 'https://www.linkedin.com/company/obat/',
                 'https://www.obat.fr/'
@@ -33,10 +33,9 @@ export const Experiences = () => {
             id: 1,
             name: "Soundcast",
             slogan: "Your audio business partner.",
-            size: "Scale-up",
-            description: "In my years at Soundcast, I participated in many aspects of a startup project, from designing user interface to implement back-end services.",
+            size: 'Scale up',
+            description: t('soundcastWork'),
             role: "Full-stack engineer",
-            image: "/chemin/vers/image-entreprise-a.png",
             links: [
                 'https://www.linkedin.com/company/soundcast-io/mycompany/',
                 'https://soundcast.io/en/'
@@ -46,8 +45,8 @@ export const Experiences = () => {
 
     return (
         <div className={'flex flex-col gap-20'} id={'experiences'}>
-            <h1 className="name-text text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold outline-text mb-6 mt-20">
-                Teams I Worked With
+            <h1 className="name-text text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold outline-text mb-6 mt-28">
+                {t('teamsIWorkedWith')}
             </h1>
             <div className="experience-grid">
                 {experiences.map(exp => (
@@ -73,8 +72,8 @@ export const Experiences = () => {
                     </div>
                 ))}
             </div>
-            <p className={'text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-center text-gray-200 text-opacity-50 italic'}>
-                "I mainly worked with startups, able to see many faces in the development process and I had to always adapt myself in many situations."
+            <p className={'text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center text-gray-200 text-opacity-50 italic'}>
+                {t('startupExperience')}
             </p>
         </div>
     );
