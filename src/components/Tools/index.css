@@ -12,18 +12,17 @@
 }
 
 .cards-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 50vh;
+    grid-gap: 50px;
 }
 
 .tool-card {
-    border-radius: 10px;
     background-color: #323232;
-    position: sticky;
     display: flex;
     align-items: center;
     gap: 50px;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
 }
 
 .tool-icon {
@@ -39,6 +38,24 @@
     display: none;
 }
 
+@media (min-width: 1025px) {
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+        grid-gap: 50px;
+    }
+}
+
+/* Pour les écrans moyens (entre 768px et 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+        grid-gap: 50px;
+    }
+}
+
+/* Pour les petits écrans (moins de 768px) */
 @media (max-width: 768px) {
     .tool-card {
         width: auto;
@@ -50,11 +67,12 @@
 
     .cards-container {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr; /* 1 colonne */
+        grid-gap: 20px; /* Ajustez selon vos besoins */
     }
 
     .tool-icon {
-        width: 80px; /* Réduction de la taille de l'icône */
+        width: 80px;
         height: 80px;
     }
 
@@ -63,6 +81,6 @@
     }
 
     .cards-container {
-        height: 50vh; /* Augmentation de la hauteur pour un meilleur défilement */
+        height: auto; /* Ou ajustez selon vos besoins */
     }
 }

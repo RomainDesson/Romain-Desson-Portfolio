@@ -6,7 +6,7 @@ import './index.css'
 export const Contact = () => {
     return (
         <div className={'contact-container mt-28'} id={'contact'}>
-            <h1 className="name-text text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold outline-text mb-6 mt-20">
+            <h1 className="name-text text-5xl lg:text-6xl xl:text-7xl font-bold outline-text mb-6 mt-20">
                 Contacts
             </h1>
             <div className="flex flex-row items-center justify-center space-x-4 my-12 bubbles-container">

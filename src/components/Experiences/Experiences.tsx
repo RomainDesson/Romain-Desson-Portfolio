@@ -45,7 +45,7 @@ export const Experiences = () => {
 
     return (
         <div className={'flex flex-col gap-20'} id={'experiences'}>
-            <h1 className="name-text text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold outline-text mb-6 mt-28">
+            <h1 className="name-text text-5xl lg:text-6xl xl:text-7xl font-bold outline-text mb-6 mt-28">
                 {t('teamsIWorkedWith')}
             </h1>
             <div className="experience-grid">

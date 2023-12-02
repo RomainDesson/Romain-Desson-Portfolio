@@ -20,5 +20,11 @@
   "soundcastDescription": "Votre partenaire d'affaires audio.",
   "soundcastRole": "Rôle : Ingénieur Full-stack",
   "soundcastWork": "Pendant mes années chez Soundcast, j'ai participé à de nombreux aspects d'un projet de startup, de la conception de l'interface utilisateur à la mise en œuvre de micro services back-end.",
-  "startupExperience": "J'ai principalement travaillé avec des startups, j'ai eu l'occasion de voir de nombreuses facettes du processus de développement d'un logiciel et j'ai dû savoir m'adapter à de nombreuses situations."
+  "startupExperience": "J'ai principalement travaillé avec des startups, j'ai eu l'occasion de voir de nombreuses facettes du processus de développement d'un logiciel et j'ai dû savoir m'adapter à de nombreuses situations.",
+  "toolReact": "React est ma bibliothèque javascript quotidienne, je l'utilise tous le sjours pour des projets professionnels mais aussi personnels.",
+  "toolTypescript": "Depuis que j'ai découvert TypeScript, ma vision de l'écosystème JavaScript a changé. Je code plus proprement et plus rapidement tout en évitant beaucoup d'erreurs.",
+  "toolNode": "En tant que développeur Javascript, le choix de NodeJs a été évident. Je l'utilise principalement dans des projets personnels lorsque j'ai besoin de créer une api rapidement et simplement avec Express notamment.",
+  "toolSolidity": "Le développement blockchain a été ma révélation de 2023. J'ai appris Solidity afin de développer mes propres smart contracts et plonger dans l'univers de la décentralisation.",
+  "toolDocker": "Docker est un outil indispensable dans mon quotidien, il me permet de déployer rapidement des environnements sur mesure et je m'en sert lorsque je veux développer des micro services.",
+  "toolGcp": "Le service cloud de google GCP est celui que je maitrîse le mieux. Il me sert à rapidement déployer des environnements dans le cloud, gérer l'authentifications ou le stockages d'images."
 }
