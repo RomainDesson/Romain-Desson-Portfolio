@@ -17,6 +17,23 @@
     width: 80px;
 }
 
+.active-link::after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+
+.active-link:hover::after,
+.active-link.active::after {
+    width: 100%;
+    background: white;
+}
+
+
 @media (max-width: 768px) {
     .topbar-container {
         display: none;
