@@ -1,5 +1,4 @@
-import React, { useRef, useEffect } from "react";
-import "./index.css"; // Assurez-vous de créer ce fichier CSS
+import "./index.css";
 
 export const Experiences = () => {
     const experiences = [

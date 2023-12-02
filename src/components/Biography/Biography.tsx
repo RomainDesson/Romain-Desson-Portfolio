@@ -1,4 +1,3 @@
-import React from 'react';
 import './index.css';
 import MaltIcon from '../../../public/malt.svg';
 import GithubIcon from '../../../public/github.svg';

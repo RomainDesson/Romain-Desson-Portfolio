@@ -1,4 +1,3 @@
-import React from 'react';
 import { Biography } from './components/Biography/Biography.tsx';
 import {Projects} from "./components/Projects/Projects.tsx";
 import './index.css'
