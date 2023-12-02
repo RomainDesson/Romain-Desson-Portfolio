@@ -38,24 +38,63 @@
     display: none;
 }
 
+.underline {
+    width: 50%;
+    height: 2px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.other-tools-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.other-tool {
+    height: 100px;
+    width: 100px;
+    position: relative;
+}
+
+.other-tool:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333; /* Couleur de fond sombre */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px; /* Bords arrondis */
+    white-space: nowrap;
+    z-index: 1;
+}
+
+@media (max-width: 1200px) {
+    .other-tools-container {
+        flex-direction: row;
+    }
+}
+
 @media (min-width: 1025px) {
     .cards-container {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+        grid-template-columns: repeat(3, 1fr);
         grid-gap: 50px;
     }
 }
 
-/* Pour les écrans moyens (entre 768px et 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
     .cards-container {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+        grid-template-columns: repeat(2, 1fr);
         grid-gap: 50px;
     }
 }
 
-/* Pour les petits écrans (moins de 768px) */
 @media (max-width: 768px) {
     .tool-card {
         width: auto;
@@ -69,6 +108,11 @@
         display: grid;
         grid-template-columns: 1fr; /* 1 colonne */
         grid-gap: 20px; /* Ajustez selon vos besoins */
+    }
+
+    .other-tool {
+        height: 50px;
+        width: 50px
     }
 
     .tool-icon {

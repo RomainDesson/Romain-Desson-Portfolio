@@ -26,5 +26,6 @@
   "toolNode": "En tant que développeur Javascript, le choix de NodeJs a été évident. Je l'utilise principalement dans des projets personnels lorsque j'ai besoin de créer une api rapidement et simplement avec Express notamment.",
   "toolSolidity": "Le développement blockchain a été ma révélation de 2023. J'ai appris Solidity afin de développer mes propres smart contracts et plonger dans l'univers de la décentralisation.",
   "toolDocker": "Docker est un outil indispensable dans mon quotidien, il me permet de déployer rapidement des environnements sur mesure et je m'en sert lorsque je veux développer des micro services.",
-  "toolGcp": "Le service cloud de google GCP est celui que je maitrîse le mieux. Il me sert à rapidement déployer des environnements dans le cloud, gérer l'authentifications ou le stockages d'images."
+  "toolGithub": "Github est un outil indispensable pour tout développeur. Il me permet de gérer mes projets personnels mais aussi de partager du code ou encore participer à des projets open source.",
+  "otherTools": "J'ai aussi eu l'opportunité d'essayer beaucoup d'autres outils intéressants..."
 }
