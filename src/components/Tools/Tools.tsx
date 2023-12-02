@@ -1,4 +1,3 @@
-import { useRef } from 'react';
 import './index.css';
 import ReactIcon from '../../../public/react.svg';
 import TypescriptIcon from '../../../public/typescript.svg';
