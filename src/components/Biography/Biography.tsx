@@ -2,12 +2,13 @@ import './index.css';
 import MaltIcon from '../../../public/malt.svg';
 import GithubIcon from '../../../public/github.svg';
 import LinkedinIcon from '../../../public/linkedin.svg';
+import ProfilePicture from '../../../public/profile.jpeg'
 
 export const Biography = () => {
     return (
         <div className="relative flex flex-col items-center pt-16 md:pt-24 lg:pt-32 h-screen">
             <div className="w-40 h-40 rounded-full bg-gray-100 border-2 border-gray-400 flex justify-center items-centertransition duration-500 ease-in-out hover:scale-110 cursor-pointer">
-                <img src={'../../../public/profile.jpeg'} alt="Malt" className=" rounded-full" />
+                <img src={ProfilePicture} alt="Malt" className=" rounded-full" />
             </div>
             <h1 className="name-text text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold outline-text mb-6 mt-20">
                 Hello, I'm Romain !

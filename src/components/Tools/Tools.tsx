@@ -1,16 +1,22 @@
 import { useRef } from 'react';
 import './index.css';
+import ReactIcon from '../../../public/react.svg';
+import TypescriptIcon from '../../../public/typescript.svg';
+import NodeIcon from '../../../public/nodejs.svg';
+import SolidityIcon from '../../../public/solidity.svg';
+import DockerIcon from '../../../public/docker.svg';
+import GCPIcon from '../../../public/gcp.svg';
 
 export const Tools = () => {
     const cardsContainerRef = useRef(null);
     const titleRef = useRef(null);
     const toolsArray = [
-        {name: 'React', img: '../../../public/react.svg'},
-        {name: 'Typescript', img: '../../../public/typescript.svg'},
-        {name: 'Nodejs', img: '../../../public/nodejs.svg'},
-        {name: 'Solidity', img: '../../../public/solidity.svg'},
-        {name: 'Docker', img: '../../../public/docker.svg'},
-        {name: 'Google cloud platform', img: '../../../public/gcp.svg'},
+        {name: 'React', img: ReactIcon},
+        {name: 'Typescript', img: TypescriptIcon},
+        {name: 'Nodejs', img: NodeIcon},
+        {name: 'Solidity', img: SolidityIcon},
+        {name: 'Docker', img: DockerIcon},
+        {name: 'Google cloud platform', img: GCPIcon},
     ]
 
     return (
