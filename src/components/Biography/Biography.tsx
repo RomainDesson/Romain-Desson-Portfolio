@@ -1,6 +1,9 @@
 import { useTranslation } from 'react-i18next';
 import './index.css';
 import ProfilePicture from '../../../public/profile.jpeg';
+import MaltIcon from "../../../public/malt.svg";
+import GithubIcon from "../../../public/github.svg";
+import LinkedinIcon from "../../../public/linkedin.svg";
 
 export const Biography = () => {
     const { t } = useTranslation();
@@ -19,6 +22,19 @@ export const Biography = () => {
             <p className="text-l md:text-sm lg:text-xl text-gray-400 max-w-prose text-center lg:mt-10">
                 {t('description')}
             </p>
+            <div className={'flex flex-row mt-10 gap-10'}>
+                <div className=" img-animation w-20 h-20 rounded-full bg-gray-100 border-2 border-gray-400 flex justify-center items-center transition duration-500 ease-in-out hover:scale-110 cursor-pointer" style={{ top: '5%', left: '50vw' }}>
+                    <img src={MaltIcon} alt="Malt" id='maltIcon' className="icon w-3/4 h-3/4" style={{marginLeft: '1px'}}/>
+                </div>
+
+                <div className="img-animation w-20 h-20 rounded-full bg-gray-100 border-2 border-gray-400 flex justify-center items-center transition duration-500 ease-in-out hover:scale-110 cursor-pointer" style={{ top: '40%', left: '80vw' }}>
+                    <img src={GithubIcon} alt="GitHub" id='githubIcon' className="icon w-3/4 h-3/4" style={{marginLeft: '1px'}}/>
+                </div>
+
+                <div className="img-animation w-20 h-20 rounded-full bg-gray-100 border-2 border-gray-400 flex justify-center items-center transition duration-500 ease-in-out hover:scale-110 cursor-pointer" style={{ top: '45%', right: '1vw' }}>
+                    <img src={LinkedinIcon} alt="LinkedIn" id='linkedinIcon' className="icon w-3/4 h-3/4" style={{marginLeft: '1px'}}/>
+                </div>
+            </div>
         </div>
     );
 };

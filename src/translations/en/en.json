@@ -27,5 +27,16 @@
   "toolSolidity": "Blockchain development was my revelation of 2023. I learned Solidity in order to develop my own smart contracts and dive into the world of decentralization.",
   "toolDocker": "Docker is an essential tool in my daily life, it allows me to quickly deploy tailor-made environments and I use it when I want to develop micro services.",
   "toolGithub": "Github is an essential tool for any developer. It allows me to manage my personal projects but also to share code or participate in open source projects.",
-  "otherTools": "I also had the opportunity to try many other usefull tools..."
+  "otherTools": "I also had the opportunity to try many other usefull tools...",
+  "talkAboutProject": "Let's talk about your project !",
+  "firstName": "First name",
+  "lastName": "Last name",
+  "email": "Email address",
+  "yourProject": "Your project (optional)",
+  "message": "Enter your message...",
+  "send": "SEND",
+  "socialMedia": "You can also reach me on the following social medias",
+  "maltDesc": "Malt is a freelancer platform where I mainly get my opportunities. this is a safe place for my clients and freelancers.",
+  "linkedinDesc": "I'm trying to regularly post usefull content on linkedin, do not hesitate to follow me !",
+  "githubDesc": "If you want to see my work and have an idea on the code I can provide, take a look at my github."
 }
