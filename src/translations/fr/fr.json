@@ -36,7 +36,9 @@
   "message": "Entrez votre message...",
   "send": "ENVOYER",
   "socialMedia": "Vous pouvez également me retrouver sur ces différentes plateformes",
-  "maltDesc": "Malt est une plateforme de freelance sur laquelle je reçois la majorité de mes opportunités. C'est un endroit sur autant pour le client que pour les freelances",
+  "maltDesc": "Malt est une plateforme de freelance sur laquelle je reçois la majorité de mes opportunités. C'est un endroit sûr autant pour le client que pour les freelances",
   "linkedinDesc": "J'essayes de poster réguliérement du contenu utile sur Linkedin, n'hésitez pas à m'y suivre !",
-  "githubDesc": "Si vous souhaitez voir mon travail et avoir une idée du code que je suis capable de produire, jetez un oeil à mon github."
+  "githubDesc": "Si vous souhaitez voir mon travail et avoir une idée du code que je suis capable de produire, jetez un oeil à mon github.",
+  "downloadResume": "Télécharger mon cv",
+  "allRights": "© 2023 Romain Desson. Tous droits réservés."
 }

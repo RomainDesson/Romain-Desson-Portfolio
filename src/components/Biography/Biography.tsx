@@ -24,15 +24,15 @@ export const Biography = () => {
             </p>
             <div className={'flex flex-row mt-10 gap-10'}>
                 <div className=" img-animation w-20 h-20 rounded-full bg-gray-100 border-2 border-gray-400 flex justify-center items-center transition duration-500 ease-in-out hover:scale-110 cursor-pointer" style={{ top: '5%', left: '50vw' }}>
-                    <img src={MaltIcon} alt="Malt" id='maltIcon' className="icon w-3/4 h-3/4" style={{marginLeft: '1px'}}/>
+                    <a href='https://www.malt.fr/profile/romaindesson' target='blank' className='reset-link-styles'><img src={MaltIcon} alt="Malt" id='maltIcon' className="icon w-3/4 h-3/4" style={{marginLeft: '1px'}}/></a>
                 </div>
 
-                <div className="img-animation w-20 h-20 rounded-full bg-gray-100 border-2 border-gray-400 flex justify-center items-center transition duration-500 ease-in-out hover:scale-110 cursor-pointer" style={{ top: '40%', left: '80vw' }}>
-                    <img src={GithubIcon} alt="GitHub" id='githubIcon' className="icon w-3/4 h-3/4" style={{marginLeft: '1px'}}/>
+                <div className="img-animation w-20 h-20 rounded-full bg-gray-100 border-2 border-gray-400 flex justify-center items-center transition duration-500 ease-in-out hover:scale-105 cursor-pointer" style={{ top: '40%', left: '80vw' }}>
+                    <a href='https://github.com/RomainDesson' target='blank' className='reset-link-styles'><img src={GithubIcon} alt="GitHub" id='githubIcon' className="icon w-3/4 h-3/4" style={{marginLeft: '1px'}}/></a>
                 </div>
 
                 <div className="img-animation w-20 h-20 rounded-full bg-gray-100 border-2 border-gray-400 flex justify-center items-center transition duration-500 ease-in-out hover:scale-110 cursor-pointer" style={{ top: '45%', right: '1vw' }}>
-                    <img src={LinkedinIcon} alt="LinkedIn" id='linkedinIcon' className="icon w-3/4 h-3/4" style={{marginLeft: '1px'}}/>
+                    <a href='https://www.linkedin.com/in/romain-desson-935466168/' target='blank' className='reset-link-styles'><img src={LinkedinIcon} alt="LinkedIn" id='linkedinIcon' className="icon w-3/4 h-3/4" style={{marginLeft: '1px'}}/></a>
                 </div>
             </div>
         </div>

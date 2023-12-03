@@ -17,6 +17,14 @@
     width: 100px;
 }
 
+.underline {
+    width: 90%;
+    height: 2px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
 @media (max-width: 768px) {
     .form-container form {
         width: 100%;

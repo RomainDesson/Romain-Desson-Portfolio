@@ -11,4 +11,16 @@
     color: #323232
 }
 
+.reset-link-styles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
 
