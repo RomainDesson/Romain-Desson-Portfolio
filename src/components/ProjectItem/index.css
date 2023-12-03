@@ -1,3 +1,24 @@
 .h-20vh {
     height: 35vh;
 }
+
+.project-image {
+    opacity: 1;
+    will-change: transform, opacity;
+}
+
+@media (max-width: 768px) {
+    .project-item {
+        flex-direction: column;
+    }
+
+    .project-item .project-image,
+    .project-item .project-text {
+        width: 100%;
+        order: 1;
+    }
+
+    .project-item .project-text {
+        order: 2;
+    }
+}

@@ -11,6 +11,10 @@
     height: 20vh;
 }
 
+#projects {
+    overflow-x: hidden;
+}
+
 @media (max-width: 768px) {
     .h-20vh {
         height: 40vh; /* Augmenter la hauteur sur mobile pour l'affichage vertical */
