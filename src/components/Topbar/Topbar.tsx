@@ -54,7 +54,7 @@ export const Topbar = () => {
     }, []);
 
     return (
-        <div className="fixed top-0 left-0 w-full z-50 grid grid-cols-3 items-center topbar-container right-0 opacity-90">
+        <div className="fixed top-0 left-0 w-full z-50 items-center topbar-container right-0 opacity-90">
             <div className="md:hidden" onClick={handleLogoClick}>
                 <FiMenu className="text-3xl m-4" />
             </div>

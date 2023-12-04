@@ -71,11 +71,11 @@ export const Contact = () => {
                     <div className={'w-full md:w-2/4 mt-20'} style={{ maxWidth: '800px' }}>
                         <p className={'text-3xl'}>{t('socialMedia')}</p>
                         <div className='flex flex-col gap-16 mt-20'>
-                            {socialMedias.map(media => (
-                                <div className='grid grid-cols-1 gap-2 items-center lg:grid-cols-2'>
-                                    <a className='flex justify-center'>
+                            {socialMedias.map((media, index) => (
+                                <div className='grid grid-cols-1 gap-2 items-center lg:grid-cols-2' key={index}>
+                                    <div className='flex justify-center'>
                                         <a href={media.link} target='blank'><img src={media.img} className={'media-icon '}/></a>
-                                    </a>
+                                    </div>
                                     <div className='flex flex-col justify-start'>
                                         <p className='text-2xl'>{media.name}</p>
                                         <p>{media.desc}</p>

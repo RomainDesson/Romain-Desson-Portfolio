@@ -1,9 +1,71 @@
 import "./index.css";
 import LinkedinIcon from '../../../public/linkedin.svg'
 import {useTranslation} from "react-i18next";
+import {useEffect, useRef} from "react";
+import gsap from "gsap";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
 
 export const Experiences = () => {
     const { t } = useTranslation();
+    gsap.registerPlugin(ScrollTrigger);
+    const cardRefs = useRef<HTMLDivElement[]>([]);
+    cardRefs.current = [];
+    const textRef = useRef<HTMLParagraphElement>(null);
+
+    const addToRefs = (el: HTMLDivElement | null) => {
+        if (el && !cardRefs.current.includes(el)) {
+            cardRefs.current.push(el);
+        }
+    };
+
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        cardRefs.current.forEach((card, index) => {
+            gsap.fromTo(card,
+                { y: 100, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.6,
+                    delay: index * 0.3,
+                    scrollTrigger: {
+                        trigger: card,
+                        start: 'top bottom',
+                        toggleActions: 'play none none none'
+                    }
+                }
+            );
+        });
+
+        const text = textRef.current;
+        if (text && text.textContent) {
+            const words = text.textContent.split(' ');
+            text.textContent = '';
+            words.forEach((word) => {
+                const wordSpan = document.createElement('span');
+                wordSpan.textContent = word + ' ';
+                text.appendChild(wordSpan);
+            });
+
+            gsap.fromTo(text.children,
+                { y: 40, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.5,
+                    delay: 0.2 * cardRefs.current.length,
+                    stagger: 0.1,
+                    scrollTrigger: {
+                        trigger: text,
+                        start: 'top bottom',
+                        toggleActions: 'play none none none'
+                    }
+                }
+            );
+        }
+    }, []);
+
     const experiences = [
         {
             id: 1,
@@ -18,7 +80,7 @@ export const Experiences = () => {
             ]
         },
         {
-            id: 1,
+            id: 2,
             name: "Obat",
             slogan: "Simplifying Invoices & Client Management.",
             size: 'Scale up',
@@ -30,7 +92,7 @@ export const Experiences = () => {
             ]
         },
         {
-            id: 1,
+            id: 3,
             name: "Soundcast",
             slogan: "Your audio business partner.",
             size: 'Scale up',
@@ -50,7 +112,7 @@ export const Experiences = () => {
             </h1>
             <div className="experience-grid">
                 {experiences.map(exp => (
-                    <div key={exp.id} className={`experience-card ${exp.name.toLowerCase()}-bg`}>
+                    <div key={exp.id} ref={addToRefs} className={`experience-card ${exp.name.toLowerCase()}-bg`}>
                         <div className="experience-content">
                             <h3 className={'text-4xl md:text-4xl lg:text-5xl xl:text-6xl'}>{exp.name}</h3>
                             <p className="slogan mb-4">{exp.slogan}</p>
@@ -72,7 +134,7 @@ export const Experiences = () => {
                     </div>
                 ))}
             </div>
-            <p className={'text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center text-gray-200 text-opacity-50 italic'}>
+            <p className={'text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center text-gray-200 text-opacity-50 italic'} ref={textRef} >
                 {t('startupExperience')}
             </p>
         </div>
