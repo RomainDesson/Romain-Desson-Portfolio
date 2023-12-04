@@ -1,16 +1,3 @@
-.outline-text {
-    color: transparent;
-    text-shadow:
-            -2px -2px 0 #FFF,
-            2px -2px 0 #FFF,
-            -2px  2px 0 #FFF,
-            2px  2px 0 #FFF;
-}
-
-.name-text {
-    color: #323232
-}
-
 .reset-link-styles {
     display: flex;
     justify-content: center;

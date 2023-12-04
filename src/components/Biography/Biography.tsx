@@ -50,7 +50,7 @@ export const Biography = () => {
                     <a href='https://www.malt.fr/profile/romaindesson' target='blank' className='reset-link-styles'><img src={MaltIcon} alt="Malt" className="icon w-3/4 h-3/4"/></a>
                 </animated.div>
                 <animated.div style={fadeInUpIconsGithub} className="img-animation w-20 h-20 rounded-full bg-gray-100 border-2 border-gray-400 flex justify-center items-center">
-                    <a href='https://github.com/RomainDesson' target='blank' className='reset-link-styles'><img src={GithubIcon} alt="Malt" className="icon w-3/4 h-3/4"/></a>
+                    <a href='https://github.com/RomainDesson' target='blank' className='reset-link-styles'><img src={GithubIcon} alt="Malt" className="icon w-3/4 h-3/4 ml-0.5"/></a>
                 </animated.div>
                 <animated.div style={fadeInUpIconsLinkedin} className="img-animation w-20 h-20 rounded-full bg-gray-100 border-2 border-gray-400 flex justify-center items-center">
                     <a href='https://www.linkedin.com/in/romain-desson-935466168/' target='blank' className='reset-link-styles'><img src={LinkedinIcon} alt="Malt" className="icon w-3/4 h-3/4"/></a>

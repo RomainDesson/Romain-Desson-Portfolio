@@ -104,7 +104,7 @@ export const Tools = () => {
                 <p className={'text-2xl text-center mt-20'}>
                     {t('otherTools')}
                 </p>
-                <div className={'flex flex-row justify-center mt-20 gap-10 other-tools-container '}>
+                <div className={'flex flex-row justify-center mt-20 other-tools-container '}>
                     {otherToolsArray.map((tool, index) => (
                         <Tooltip key={index} text={tool.name}>
                             <img

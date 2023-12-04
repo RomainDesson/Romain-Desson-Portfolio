@@ -58,7 +58,7 @@ export const Topbar = () => {
             <div className="md:hidden" onClick={handleLogoClick}>
                 <FiMenu className="text-3xl m-4" />
             </div>
-            <img src={Logo} className="hidden md:block logo"/>
+            <img src={Logo} className="hidden md:block logo rounded-full ml-2 mt-2 mb-2"/>
             <div className={'md:flex justify-center md:gap-10 sm:gap-3 hidden'}>
                 <div onClick={() => scrollToSection('biography')} className={`text-white text-2xl my-2 md:my-0 md:mx-2 cursor-pointer ${activeSection === 'biography' ? 'active-link active' : 'active-link'}`}>{t('biography')}</div>
                 <div onClick={() => scrollToSection('projects')} className={`text-white text-2xl my-2 md:my-0 md:mx-2 cursor-pointer ${activeSection === 'projects' ? 'active-link active' : 'active-link'}`}>{t('projects')}</div>
