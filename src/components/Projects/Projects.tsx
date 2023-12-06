@@ -12,7 +12,7 @@ export const Projects = () => {
 
         gsap.utils.toArray<any>('.project-item').forEach((item: any, i: number) => {
             let img = item.querySelector('.project-image');
-            let text = item.querySelector('.project-text');
+            let text = item.querySelector('.project-content');
 
             gsap.from(img, {
                 opacity: 0,
@@ -46,19 +46,23 @@ export const Projects = () => {
             <div className="flex flex-col justify-center items-center space-y-32 max-w-7xl mx-auto">
                 <ProjectItem
                     imgSrc="path/to/your/image1.jpg"
+                    name='TheGreatMeme'
                     text="Project Description 1"
                 />
                 <ProjectItem
                     imgSrc="path/to/your/image2.jpg"
+                    name='TheGreatMeme'
                     text="Project Description 2"
                     isReverse
                 />
                 <ProjectItem
                     imgSrc="path/to/your/image3.jpg"
+                    name='TheGreatMeme'
                     text="Project Description 3"
                 />
                 <ProjectItem
                     imgSrc="path/to/your/image4.jpg"
+                    name='TheGreatMeme'
                     text="Project Description 4"
                     isReverse
                 />

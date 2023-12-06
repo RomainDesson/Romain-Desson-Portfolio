@@ -7,7 +7,7 @@ import LinkedinIcon from '../../../public/linkedin.svg'
 import GithubIcon from '../../../public/github.svg'
 import {Footer} from "../Footer/Footer.tsx";
 import axios from 'axios'
-import {sendGridEndpoint} from "../../endpoints.ts";
+import {downloadResumeEndpoint, sendGridEndpoint} from "../../endpoints.ts";
 import {ChangeEvent, FormEvent, useState} from "react";
 
 export const Contact = () => {
@@ -57,7 +57,7 @@ export const Contact = () => {
                     {t('contact')}
                 </h1>
                 <div className='flex justify-center mt-16 md:mb-8 text-3xl'>
-                    <Button variant="contained" color="primary" type="submit">
+                    <Button variant="contained" color="primary" type="submit" onClick={() => window.open(downloadResumeEndpoint, "_blank")}>
                         <p className='text-lg'>{t('downloadResume')}</p>
                     </Button>
                 </div>
