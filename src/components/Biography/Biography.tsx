@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import {useEffect, useRef, useState} from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSpring, animated } from 'react-spring';
 import Typed from 'typed.js';
@@ -11,6 +11,9 @@ import LinkedinIcon from "../../../public/linkedin.svg";
 export const Biography = () => {
     const { t } = useTranslation();
     const typedTarget = useRef(null);
+    const [hoverMalt, setHoverMalt] = useState(false);
+    const [hoverGithub, setHoverGithub] = useState(false);
+    const [hoverLinkedin, setHoverLinkedin] = useState(false);
 
     useEffect(() => {
         const typed = new Typed(typedTarget.current, {
@@ -30,6 +33,9 @@ export const Biography = () => {
     const fadeInDescription = useSpring({ from: { opacity: 0 }, to: { opacity: 1 }, delay: 2000 });
     const fadeInIntro = useSpring({ from: { opacity: 0 }, to: { opacity: 1 }, delay: 1500 });
     const fadeInProfile = useSpring({ from: { opacity: 0 }, to: { opacity: 1 }, delay: 2300 });
+    const hoverMaltAnimation = useSpring({ transform: hoverMalt ? 'scale(1.1)' : 'scale(1)' });
+    const hoverGithubAnimation = useSpring({ transform: hoverGithub ? 'scale(1.1)' : 'scale(1)' });
+    const hoverLinkedinAnimation = useSpring({ transform: hoverLinkedin ? 'scale(1.1)' : 'scale(1)' });
 
     return (
         <div className="flex flex-col items-center pt-16 md:pt-24 lg:pt-32" id="biography">
@@ -46,14 +52,34 @@ export const Biography = () => {
                 {t('description')}
             </animated.p>
             <div className={'flex flex-row mt-10 gap-10'}>
-                <animated.div style={fadeInUpIconsMalt} className="img-animation w-20 h-20 rounded-full bg-gray-100 border-2 border-gray-400 flex justify-center items-center">
-                    <a href='https://www.malt.fr/profile/romaindesson' target='blank' className='reset-link-styles'><img src={MaltIcon} alt="Malt" className="icon w-3/4 h-3/4"/></a>
+                <animated.div
+                    style={{...fadeInUpIconsMalt, ...hoverMaltAnimation}}
+                    className="img-animation w-20 h-20 rounded-full bg-gray-100 border-8 border-gray-400 flex justify-center items-center"
+                    onMouseEnter={() => setHoverMalt(true)}
+                    onMouseLeave={() => setHoverMalt(false)}
+                >
+                    <a href='https://www.malt.fr/profile/romaindesson' target='blank' className='reset-link-styles'>
+                        <img src={MaltIcon} alt="Malt" className="icon w-3/4 h-3/4"/>
+                    </a>
                 </animated.div>
-                <animated.div style={fadeInUpIconsGithub} className="img-animation w-20 h-20 rounded-full bg-gray-100 border-2 border-gray-400 flex justify-center items-center">
-                    <a href='https://github.com/RomainDesson' target='blank' className='reset-link-styles'><img src={GithubIcon} alt="Malt" className="icon w-3/4 h-3/4 ml-0.5"/></a>
+                <animated.div
+                    style={{...fadeInUpIconsGithub, ...hoverGithubAnimation}}
+                    className="img-animation w-20 h-20 rounded-full bg-gray-100 border-8 border-gray-400 flex justify-center items-center"
+                    onMouseEnter={() => setHoverGithub(true)}
+                    onMouseLeave={() => setHoverGithub(false)}
+                >
+                    <a href='https://github.com/RomainDesson' target='blank' className='reset-link-styles'>
+                        <img src={GithubIcon} alt="Malt" className="icon w-3/4 h-3/4 "/>
+                    </a>
                 </animated.div>
-                <animated.div style={fadeInUpIconsLinkedin} className="img-animation w-20 h-20 rounded-full bg-gray-100 border-2 border-gray-400 flex justify-center items-center">
-                    <a href='https://www.linkedin.com/in/romain-desson-935466168/' target='blank' className='reset-link-styles'><img src={LinkedinIcon} alt="Malt" className="icon w-3/4 h-3/4"/></a>
+                <animated.div style={{...fadeInUpIconsLinkedin, ...hoverLinkedinAnimation}}
+                              className="img-animation w-20 h-20 rounded-full bg-gray-100 border-8 border-gray-400 flex justify-center items-center"
+                              onMouseEnter={() => setHoverLinkedin(true)}
+                              onMouseLeave={() => setHoverLinkedin(false)}
+                >
+                    <a href='https://www.linkedin.com/in/romain-desson-935466168/' target='blank' className='reset-link-styles'>
+                        <img src={LinkedinIcon} alt="Malt" className="icon w-3/4 h-3/4"/>
+                    </a>
                 </animated.div>
             </div>
         </div>

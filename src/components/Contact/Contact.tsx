@@ -6,15 +6,49 @@ import MaltIcon from '../../../public/malt.svg'
 import LinkedinIcon from '../../../public/linkedin.svg'
 import GithubIcon from '../../../public/github.svg'
 import {Footer} from "../Footer/Footer.tsx";
+import axios from 'axios'
+import {sendGridEndpoint} from "../../endpoints.ts";
+import {ChangeEvent, FormEvent, useState} from "react";
 
 export const Contact = () => {
     const { t } = useTranslation();
+
+    const [formData, setFormData] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        project: '',
+        message: ''
+    });
 
     const socialMedias = [
         {name: 'Malt', img: MaltIcon, desc: t('maltDesc'), link: 'https://www.malt.fr/profile/romaindesson'},
         {name: 'Linkedin', img: LinkedinIcon, desc: t('linkedinDesc'), link: 'https://www.linkedin.com/in/romain-desson-935466168/'},
         {name: 'Github', img: GithubIcon, desc: t('githubDesc'), link: 'https://github.com/RomainDesson'}
     ]
+
+    const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
+        setFormData(prevState => ({
+            ...prevState,
+            [name]: value
+        }));
+    }
+
+    const handleSendMailClick = async (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        try {
+            const response = await axios.post(sendGridEndpoint, {
+                subject: 'Email venant du portfolio',
+                text: `Nom : ${formData.firstName} ${formData.lastName}\nEmail : ${formData.email}\nProjet : ${formData.project}\nMessage : ${formData.message}`
+            });
+
+            console.log('Email envoyé avec succès :', response.data);
+        } catch (error) {
+            console.error('Erreur lors de l\'envoi de l\'email :', error);
+        }
+    }
 
     return (
         <div className={'contact-container pt-28'} id={'contact'}>
@@ -30,38 +64,52 @@ export const Contact = () => {
                 <div className={'flex flex-col between gap-20 md:flex-row mb-60'}>
                     <div className="form-container mt-20 w-full md:w-2/4">
                         <p className={'text-3xl'}>Let's talk about your project !</p>
-                            <form style={{ maxWidth: '800px' }}>
+                            <form style={{ maxWidth: '800px' }} onSubmit={handleSendMailClick}>
                                 <TextField
                                     fullWidth
+                                    required
                                     label={t('firstName')}
                                     variant="standard"
                                     margin="normal"
+                                    name="firstName"
+                                    onChange={handleInputChange}
                                 />
                                 <TextField
                                     fullWidth
+                                    required
                                     label={t('lastName')}
                                     variant="standard"
                                     margin="normal"
+                                    name="lastName"
+                                    onChange={handleInputChange}
                                 />
                                 <TextField
                                     fullWidth
+                                    required
                                     label={t('email')}
                                     type="email"
                                     variant="standard"
                                     margin="normal"
+                                    name="email"
+                                    onChange={handleInputChange}
                                 />
                                 <TextField
                                     fullWidth
                                     label={t('yourProject')}
                                     variant="standard"
                                     margin="normal"
+                                    name="project"
+                                    onChange={handleInputChange}
                                 />
                                 <TextField
                                     fullWidth
+                                    required
                                     label={t('message')}
                                     multiline
                                     rows={4}
                                     margin="normal"
+                                    name="message"
+                                    onChange={handleInputChange}
                                 />
                                 <Button variant="contained" color="primary" type="submit">
                                     {t('send')}

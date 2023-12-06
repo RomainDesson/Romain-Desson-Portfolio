@@ -1,7 +1,7 @@
 import "./index.css";
 import LinkedinIcon from '../../../public/linkedin.svg'
 import {useTranslation} from "react-i18next";
-import {useEffect, useRef} from "react";
+import React, {useEffect, useRef} from "react";
 import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 
@@ -66,12 +66,23 @@ export const Experiences = () => {
         }
     }, []);
 
+    const handleMouseEnter = (e: React.MouseEvent<HTMLElement>) => {
+        gsap.to(e.currentTarget, { scale: 1.1, ease: "power1.out" });
+        const otherCards = gsap.utils.toArray('.experience-card').filter(card => card !== e.currentTarget);
+        gsap.to(otherCards, { scale: 0.9, ease: "power1.out" });
+    };
+
+    const handleMouseLeave = () => {
+        const allCards = gsap.utils.toArray('.experience-card');
+        gsap.to(allCards, { scale: 1, ease: "power1.out" });
+    };
+
     const experiences = [
         {
             id: 1,
             name: "Astran",
             slogan: "The secure cloud storage made simple.",
-            size: "Startup",
+            size: "Start up",
             description: t('astranWork'),
             role: "Front-end engineer",
             links: [
@@ -112,7 +123,13 @@ export const Experiences = () => {
             </h1>
             <div className="experience-grid">
                 {experiences.map(exp => (
-                    <div key={exp.id} ref={addToRefs} className={`experience-card ${exp.name.toLowerCase()}-bg`}>
+                    <div
+                        key={exp.id}
+                        ref={addToRefs}
+                        className={`experience-card ${exp.name.toLowerCase()}-bg`}
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                    >
                         <div className="experience-content">
                             <h3 className={'text-4xl md:text-4xl lg:text-5xl xl:text-6xl'}>{exp.name}</h3>
                             <p className="slogan mb-4">{exp.slogan}</p>
