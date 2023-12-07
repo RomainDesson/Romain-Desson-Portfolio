@@ -12,6 +12,7 @@
     background-size: cover;
     background-position: center;
     min-height: 100%;
+    flex-grow: 1;
 }
 
 .experience-card::before {
@@ -84,5 +85,8 @@
 @media (max-width: 768px) {
     .experience-grid {
         grid-template-columns: 1fr;
+    }
+    .experience-card {
+        min-height: 40vh;
     }
 }
