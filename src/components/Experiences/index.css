@@ -6,17 +6,12 @@
 }
 
 .experience-card {
-    position: relative;
     text-align: center;
     padding: 15px;
-    color: white; /* Pour assurer la lisibilité du texte */
+    color: white;
     background-size: cover;
     background-position: center;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
+    min-height: 100%;
 }
 
 .experience-card::before {
@@ -89,8 +84,5 @@
 @media (max-width: 768px) {
     .experience-grid {
         grid-template-columns: 1fr;
-    }
-    .experience-card {
-        min-height: 100%;
     }
 }
