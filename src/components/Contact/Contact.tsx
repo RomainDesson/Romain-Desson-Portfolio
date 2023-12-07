@@ -9,9 +9,11 @@ import {Footer} from "../Footer/Footer.tsx";
 import axios from 'axios'
 import {downloadResumeEndpoint, sendGridEndpoint} from "../../endpoints.ts";
 import {ChangeEvent, FormEvent, useState} from "react";
+import {useSnackbar} from "notistack";
 
 export const Contact = () => {
     const { t } = useTranslation();
+    const { enqueueSnackbar } = useSnackbar();
 
     const [formData, setFormData] = useState({
         firstName: '',
@@ -43,10 +45,20 @@ export const Contact = () => {
                 subject: 'Email venant du portfolio',
                 text: `Nom : ${formData.firstName} ${formData.lastName}\nEmail : ${formData.email}\nProjet : ${formData.project}\nMessage : ${formData.message}`
             });
+            console.log(response)
+            if (response.status === 200) {
+                setFormData({
+                    firstName: '',
+                    lastName: '',
+                    email: '',
+                    project: '',
+                    message: ''
+                })
+                enqueueSnackbar(t('messageSent'), { variant: 'success' });
+            }
 
-            console.log('Email envoyé avec succès :', response.data);
         } catch (error) {
-            console.error('Erreur lors de l\'envoi de l\'email :', error);
+            enqueueSnackbar(t('messageError'), { variant: 'error' });
         }
     }
 
@@ -72,6 +84,7 @@ export const Contact = () => {
                                     variant="standard"
                                     margin="normal"
                                     name="firstName"
+                                    value={formData.firstName}
                                     onChange={handleInputChange}
                                 />
                                 <TextField
@@ -81,6 +94,7 @@ export const Contact = () => {
                                     variant="standard"
                                     margin="normal"
                                     name="lastName"
+                                    value={formData.lastName}
                                     onChange={handleInputChange}
                                 />
                                 <TextField
@@ -91,6 +105,7 @@ export const Contact = () => {
                                     variant="standard"
                                     margin="normal"
                                     name="email"
+                                    value={formData.email}
                                     onChange={handleInputChange}
                                 />
                                 <TextField
@@ -99,6 +114,7 @@ export const Contact = () => {
                                     variant="standard"
                                     margin="normal"
                                     name="project"
+                                    value={formData.project}
                                     onChange={handleInputChange}
                                 />
                                 <TextField
@@ -109,6 +125,7 @@ export const Contact = () => {
                                     rows={4}
                                     margin="normal"
                                     name="message"
+                                    value={formData.message}
                                     onChange={handleInputChange}
                                 />
                                 <Button variant="contained" color="primary" type="submit">

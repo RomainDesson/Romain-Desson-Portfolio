@@ -40,5 +40,7 @@
   "linkedinDesc": "I'm trying to regularly post usefull content on linkedin, do not hesitate to follow me !",
   "githubDesc": "If you want to see my work and have an idea on the code I can provide, take a look at my github.",
   "downloadResume": "Download my resume",
-  "allRights": "© 2023 Romain Desson. All rights reserved."
+  "allRights": "© 2023 Romain Desson. All rights reserved.",
+  "messageSent": "Message sent successfully !",
+  "messageError": "Error while sending message."
 }
