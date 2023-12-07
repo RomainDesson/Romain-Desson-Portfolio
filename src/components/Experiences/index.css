@@ -94,4 +94,7 @@
     .experience-grid {
         grid-template-columns: 1fr;
     }
+    .experience-card {
+        min-height: 100%;
+    }
 }
