@@ -40,7 +40,7 @@ export const Projects = () => {
 
     return (
         <div id={'projects'}>
-            <h1 className="name-text text-5xl lg:text-6xl xl:text-7xl font-bold outline-text mb-6 pt-28">
+            <h1 className="name-text text-5xl lg:text-6xl xl:text-7xl font-bold outline-text mb-36 md:mb-6 pt-28">
                 {t('myProjects')}
             </h1>
             <div className="flex flex-col justify-center items-center space-y-32 max-w-7xl mx-auto">
