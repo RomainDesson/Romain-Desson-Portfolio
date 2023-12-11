@@ -6,6 +6,7 @@
 }
 
 .experience-card {
+    font-family: 'JetBrains Mono', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

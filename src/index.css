@@ -13,7 +13,7 @@
     will-change: transform;
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-family: 'JetBrains Mono', sans-serif;
     color: rgba(255, 255, 255, 0.8);
     letter-spacing: -2px;
