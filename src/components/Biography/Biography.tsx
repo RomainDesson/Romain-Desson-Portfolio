@@ -42,12 +42,12 @@ export const Biography = () => {
             <animated.div style={fadeInProfile} className="w-40 h-40 rounded-full bg-gray-100 border-2 border-gray-400 flex justify-center items-center">
                 <img src={ProfilePicture} alt={t('malt')} className="rounded-full" />
             </animated.div>
-            <h1 className="name-text text-4xl lg:text-5xl xl:text-6xl font-bold outline-text mb-6 mt-10">
+            <h1 className="name-text text-center text-4xl lg:text-5xl xl:text-6xl font-bold outline-text mb-6 mt-10">
                 <span ref={typedTarget}></span>
             </h1>
-            <animated.p style={fadeInIntro} className="text-2xl md:text-3xl xl:text-5xl lg:text-4xl mb-6 mt-6 text-center">
+            <animated.h2 style={fadeInIntro} className="text-2xl md:text-3xl xl:text-5xl lg:text-4xl mb-6 mt-6 text-center">
                 <span>{t('intro')}</span>
-            </animated.p>
+            </animated.h2>
             <animated.p style={fadeInDescription} className="text-l md:text-sm lg:text-xl text-gray-400 max-w-prose text-center lg:mt-10">
                 {t('description')}
             </animated.p>

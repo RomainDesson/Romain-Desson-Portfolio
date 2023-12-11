@@ -67,9 +67,9 @@ export const Experiences = () => {
     }, []);
 
     const handleMouseEnter = (e: React.MouseEvent<HTMLElement>) => {
-        gsap.to(e.currentTarget, { scale: 1.1, ease: "power1.out" });
+        gsap.to(e.currentTarget, { scale: 1.006, ease: "power1.out" });
         const otherCards = gsap.utils.toArray('.experience-card').filter(card => card !== e.currentTarget);
-        gsap.to(otherCards, { scale: 0.9, ease: "power1.out" });
+        gsap.to(otherCards, { scale: 0.97, ease: "power1.out" });
     };
 
     const handleMouseLeave = () => {

@@ -45,7 +45,6 @@ export const Contact = () => {
                 subject: 'Email venant du portfolio',
                 text: `Nom : ${formData.firstName} ${formData.lastName}\nEmail : ${formData.email}\nProjet : ${formData.project}\nMessage : ${formData.message}`
             });
-            console.log(response)
             if (response.status === 200) {
                 setFormData({
                     firstName: '',

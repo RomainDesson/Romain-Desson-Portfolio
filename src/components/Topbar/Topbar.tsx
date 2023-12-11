@@ -78,11 +78,11 @@ export const Topbar = () => {
             </div>
             {isMenuOpen && (
                 <div className={isMenuOpen ? "mobile-nav-fullscreen open" : "mobile-nav-fullscreen"}>
-                    <div onClick={() => scrollToSection('biography')} className={`text-white text-2xl my-2 md:my-0 md:mx-2 cursor-pointer ${activeSection === 'biography' ? 'active-link active' : 'active-link'}`}>{t('biography')}</div>
-                    <div onClick={() => scrollToSection('projects')} className={`text-white text-2xl my-2 md:my-0 md:mx-2 cursor-pointer ${activeSection === 'projects' ? 'active-link active' : 'active-link'}`}>{t('projects')}</div>
-                    <div onClick={() => scrollToSection('tools')} className={`text-white text-2xl my-2 md:my-0 md:mx-2 cursor-pointer ${activeSection === 'tools' ? 'active-link active' : 'active-link'}`}>{t('tools')}</div>
-                    <div onClick={() => scrollToSection('experiences')} className={`text-white text-2xl my-2 md:my-0 md:mx-2 cursor-pointer ${activeSection === 'experiences' ? 'active-link active' : 'active-link'}`}>{t('experiences')}</div>
-                    <div onClick={() => scrollToSection('contact')} className={`text-white text-2xl my-2 md:my-0 md:mx-2 cursor-pointer ${activeSection === 'contact' ? 'active-link active' : 'active-link'}`}>{t('contact')}</div>
+                    <div onClick={() => scrollToSection('biography')} className={`text-white text-2xl my-2 md:my-0 md:mx-2 cursor-pointer ${activeSection === 'biography' ? 'active-link active' : 'active-link'}`}><p className='topbar-item'>{t('biography')}</p></div>
+                    <div onClick={() => scrollToSection('projects')} className={`text-white text-2xl my-2 md:my-0 md:mx-2 cursor-pointer ${activeSection === 'projects' ? 'active-link active' : 'active-link'}`}><p className='topbar-item'>{t('projects')}</p></div>
+                    <div onClick={() => scrollToSection('tools')} className={`text-white text-2xl my-2 md:my-0 md:mx-2 cursor-pointer ${activeSection === 'tools' ? 'active-link active' : 'active-link'}`}><p className='topbar-item'>{t('tools')}</p></div>
+                    <div onClick={() => scrollToSection('experiences')} className={`text-white text-2xl my-2 md:my-0 md:mx-2 cursor-pointer ${activeSection === 'experiences' ? 'active-link active' : 'active-link'}`}><p className='topbar-item'>{t('experiences')}</p></div>
+                    <div onClick={() => scrollToSection('contact')} className={`text-white text-2xl my-2 md:my-0 md:mx-2 cursor-pointer ${activeSection === 'contact' ? 'active-link active' : 'active-link'}`}><p className='topbar-item'>{t('contact')}</p></div>
                     <div className='flex flex-row gap-10 mt-20'>
                         <span
                             className={`cursor-pointer fi fi-gb text-xl ${activeLanguage === 'en' ? 'active-language' : ''}`}
