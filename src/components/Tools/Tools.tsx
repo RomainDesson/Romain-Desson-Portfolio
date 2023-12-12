@@ -5,7 +5,7 @@ import TypescriptIcon from '../../../public/typescript.svg';
 import NodeIcon from '../../../public/nodejs.svg';
 import SolidityIcon from '../../../public/solidity.svg';
 import DockerIcon from '../../../public/docker.svg';
-import GithubIcon from '../../../public/github.svg';
+import GithubIcon from '../../../public/github-white.svg';
 import GcpIcon from '../../../public/gcp.svg';
 import GitlabIcon from '../../../public/gitlab.svg'
 import ExpressIcon from '../../../public/express.svg'
@@ -35,10 +35,10 @@ export const Tools = () => {
 
     const toolsArray = [
         {name: 'React', img: ReactIcon, desc: t('toolReact')},
-        {name: 'Typescript', img: TypescriptIcon, desc: t('toolTypescript')},
+        {name: 'Docker', img: DockerIcon, desc: t('toolDocker')},
         {name: 'Nodejs', img: NodeIcon, desc: t('toolNode')},
         {name: 'Solidity', img: SolidityIcon, desc: t('toolSolidity')},
-        {name: 'Docker', img: DockerIcon, desc: t('toolDocker')},
+        {name: 'Typescript', img: TypescriptIcon, desc: t('toolTypescript')},
         {name: 'Github', img: GithubIcon, desc: t('toolGithub')},
     ]
 
