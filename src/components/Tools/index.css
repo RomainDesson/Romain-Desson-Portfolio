@@ -1,134 +1,133 @@
 .tools-container {
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .title {
-    text-align: center;
-    margin: 0;
-    padding: 20px;
-    font-size: 2rem;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  font-size: 2rem;
 }
 
 .cards-container {
-    grid-gap: 50px;
+  grid-gap: 50px;
 }
 
 .tool-card {
-    font-family: 'JetBrains Mono', sans-serif;
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    flex-direction: column;
-    padding: 20px;
-    text-align: center;
+  font-family: "JetBrains Mono", sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-direction: column;
+  padding: 20px;
+  text-align: center;
 }
 
 .tool-icon {
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    background-color: #323232;
-    border: 1px solid grey;
-    box-shadow: 0px 0px 5px grey;
-    padding: 5px;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  background-color: #323232;
+  border: 1px solid grey;
+  padding: 5px;
 }
 
 .tool-name {
-    font-size: 2.5rem;
-    text-align: center;
-    display: none;
+  font-size: 2.5rem;
+  text-align: center;
+  display: none;
 }
 
 .underline {
-    width: 50%;
-    height: 2px;
-    background-color: white;
-    margin: 0 auto;
-    margin-top: 10px;
+  width: 50%;
+  height: 2px;
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 10px;
 }
 
 .other-tools-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
 .other-tool {
-    height: 100px;
-    width: 100px;
-    position: relative;
+  height: 100px;
+  width: 100px;
+  position: relative;
 }
 
 .other-tool:hover::after {
-    content: attr(title);
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #333; /* Couleur de fond sombre */
-    color: white;
-    padding: 5px 10px;
-    border-radius: 4px; /* Bords arrondis */
-    white-space: nowrap;
-    z-index: 1;
+  content: attr(title);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333; /* Couleur de fond sombre */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px; /* Bords arrondis */
+  white-space: nowrap;
+  z-index: 1;
 }
 
 @media (max-width: 1200px) {
-    .other-tools-container {
-        flex-direction: row;
-    }
+  .other-tools-container {
+    flex-direction: row;
+  }
 }
 
 @media (min-width: 1025px) {
-    .cards-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 50px;
-    }
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-    .cards-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 50px;
-    }
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+  }
 }
 
 @media (max-width: 768px) {
-    .tool-card {
-        width: auto;
-        height: auto;
-        flex-direction: column;
-        padding: 10px;
-        gap: 10px;
-    }
+  .tool-card {
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+  }
 
-    .cards-container {
-        display: grid;
-        grid-template-columns: 1fr; /* 1 colonne */
-        grid-gap: 20px; /* Ajustez selon vos besoins */
-    }
+  .cards-container {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 colonne */
+    grid-gap: 20px; /* Ajustez selon vos besoins */
+  }
 
-    .other-tool {
-        height: 50px;
-        width: 50px
-    }
+  .other-tool {
+    height: 50px;
+    width: 50px;
+  }
 
-    .tool-icon {
-        width: 80px;
-        height: 80px;
-    }
+  .tool-icon {
+    width: 80px;
+    height: 80px;
+  }
 
-    .tool-name {
-        display: none;
-    }
+  .tool-name {
+    display: none;
+  }
 
-    .cards-container {
-        height: auto; /* Ou ajustez selon vos besoins */
-    }
+  .cards-container {
+    height: auto; /* Ou ajustez selon vos besoins */
+  }
 }

@@ -25,7 +25,8 @@
     "react-i18next": "^13.5.0",
     "react-icons": "^4.12.0",
     "react-spring": "^9.7.3",
-    "typed.js": "^2.1.0"
+    "typed.js": "^2.1.0",
+    "typescript-eslint": "^7.16.1"
   },
   "devDependencies": {
     "@types/gsap": "^3.0.0",
