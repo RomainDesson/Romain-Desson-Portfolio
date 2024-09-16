@@ -1,5 +1,5 @@
 import { Biography } from './components/Biography/Biography.tsx';
-import {Projects} from "./components/Projects/Projects.tsx";
+//import {Projects} from "./components/Projects/Projects.tsx";
 import './index.css'
 import {Tools} from "./components/Tools/Tools.tsx";
 import {Experiences} from "./components/Experiences/Experiences.tsx";
