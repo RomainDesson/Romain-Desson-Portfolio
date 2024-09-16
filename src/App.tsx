@@ -15,9 +15,11 @@ const App = () => {
                 <div className="first-view-container px-4 py-8 sm:px-8 md:px-12 lg:px-16 xl:px-20">
                     <Biography />
                 </div>
+                {/*
                 <div className="view-container projects-view tools- px-4 py-8 sm:px-8 md:px-12 lg:px-16 xl:px-20">
                     <Projects />
                 </div>
+                */}
                 <div className="view-container tools-view px-4 py-8 sm:px-8 md:px-12 lg:px-16 xl:px-20">
                     <Tools />
                 </div>

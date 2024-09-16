@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useSpring, animated } from 'react-spring';
 import Typed from 'typed.js';
 import './index.css';
-import ProfilePicture from '../../../public/profile.jpeg';
+import ProfilePicture from '../../../public/profile.png';
 import MaltIcon from "../../../public/malt.svg";
 import GithubIcon from "../../../public/github.svg";
 import LinkedinIcon from "../../../public/linkedin.svg";
@@ -38,23 +38,21 @@ export const Biography = () => {
     const hoverLinkedinAnimation = useSpring({ transform: hoverLinkedin ? 'scale(1.1)' : 'scale(1)' });
 
     return (
-        <div className="flex flex-col items-center pt-16 md:pt-24 lg:pt-32" id="biography">
-            <animated.div style={fadeInProfile} className="w-40 h-40 rounded-full bg-gray-100 border-2 border-gray-400 flex justify-center items-center">
-                <img src={ProfilePicture} alt={t('malt')} className="rounded-full" />
-            </animated.div>
-            <h1 className="name-text text-center text-4xl lg:text-5xl xl:text-6xl font-bold outline-text mb-6 mt-10">
-                <span ref={typedTarget}></span>
-            </h1>
-            <animated.h2 style={fadeInIntro} className="text-2xl md:text-3xl xl:text-5xl lg:text-4xl mb-6 mt-6 text-center">
-                <span>{t('intro')}</span>
-            </animated.h2>
-            <animated.p style={fadeInDescription} className="text-l md:text-sm lg:text-xl text-gray-400 max-w-prose text-center lg:mt-10">
-                {t('description')}
-            </animated.p>
-            <div className={'flex flex-row mt-10 gap-10'}>
+        <div className="flex flex-col-reverse md:flex-row items-center justify-between mx-auto px-4" id="biography">
+            <div className="w-full md:w-1/2 flex flex-col items-center md:items-start">
+                <h1 className="name-text text-center md:text-left text-5xl lg:text-6xl xl:text-8xl font-bold outline-text mb-6">
+                    <span ref={typedTarget}></span>
+                </h1>
+                <animated.h2 style={fadeInIntro} className="text-2xl md:text-3xl xl:text-5xl lg:text-4xl mb-6 text-center md:text-left">
+                    <span>{t('intro')}</span>
+                </animated.h2>
+                <animated.p style={fadeInDescription} className="text-l md:text-lg lg:text-2xl xl:text-3xl max-w-prose text-center md:text-left mb-10">
+                    {t('description')}
+                </animated.p>
+                <div className="flex flex-row gap-10">
                 <animated.div
                     style={{...fadeInUpIconsMalt, ...hoverMaltAnimation}}
-                    className="img-animation w-20 h-20 rounded-full bg-gray-100 border-8 border-gray-400 flex justify-center items-center"
+                    className="img-animation w-20 h-20 rounded-full flex justify-center items-center"
                     onMouseEnter={() => setHoverMalt(true)}
                     onMouseLeave={() => setHoverMalt(false)}
                 >
@@ -64,7 +62,7 @@ export const Biography = () => {
                 </animated.div>
                 <animated.div
                     style={{...fadeInUpIconsGithub, ...hoverGithubAnimation}}
-                    className="img-animation w-20 h-20 rounded-full bg-gray-100 border-8 border-gray-400 flex justify-center items-center"
+                    className="img-animation w-20 h-20 rounded-full flex justify-center items-center"
                     onMouseEnter={() => setHoverGithub(true)}
                     onMouseLeave={() => setHoverGithub(false)}
                 >
@@ -73,13 +71,20 @@ export const Biography = () => {
                     </a>
                 </animated.div>
                 <animated.div style={{...fadeInUpIconsLinkedin, ...hoverLinkedinAnimation}}
-                              className="img-animation w-20 h-20 rounded-full bg-gray-100 border-8 border-gray-400 flex justify-center items-center"
+                              className="img-animation w-20 h-20 rounded-full flex justify-center items-center"
                               onMouseEnter={() => setHoverLinkedin(true)}
                               onMouseLeave={() => setHoverLinkedin(false)}
                 >
                     <a href='https://www.linkedin.com/in/romain-desson-935466168/' target='blank' className='reset-link-styles'>
                         <img src={LinkedinIcon} alt="Malt" className="icon w-3/4 h-3/4"/>
                     </a>
+                </animated.div>
+                </div>
+            </div>
+            
+            <div className="w-full md:w-1/2 mb-8 md:mb-0 flex justify-center md:justify-end md:mt-0 overflow-visible">
+                <animated.div style={fadeInProfile} className="w-auto h-[40vh] md:w-[100vh] md:h-[100vh] flex overflow-visible">
+                    <img src={ProfilePicture} alt={t('malt')} className="rounded-full w-auto h-auto object-cover" />
                 </animated.div>
             </div>
         </div>

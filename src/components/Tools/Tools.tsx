@@ -35,10 +35,10 @@ export const Tools = () => {
 
     const toolsArray = [
         {name: 'React', img: ReactIcon, desc: t('toolReact')},
-        {name: 'Docker', img: DockerIcon, desc: t('toolDocker')},
+        {name: 'Typescript', img: TypescriptIcon, desc: t('toolTypescript')},
         {name: 'Nodejs', img: NodeIcon, desc: t('toolNode')},
         {name: 'Solidity', img: SolidityIcon, desc: t('toolSolidity')},
-        {name: 'Typescript', img: TypescriptIcon, desc: t('toolTypescript')},
+        {name: 'Docker', img: DockerIcon, desc: t('toolDocker')},
         {name: 'Github', img: GithubIcon, desc: t('toolGithub')},
     ]
 
@@ -95,7 +95,7 @@ export const Tools = () => {
                 {toolsArray.map((tool, index) => (
                     <div ref={addToRefs} key={index} className="tool-card">
                         <img src={tool.img} alt={`${tool.name} icon by Icons8 https://icons8.com/icons`} className="tool-icon"></img>
-                        <p className={'text-xl'}>{tool.desc}</p>
+                        <p className={'text-xl xl:text-3xl'}>{tool.desc}</p>
                     </div>
                 ))}
             </div>
